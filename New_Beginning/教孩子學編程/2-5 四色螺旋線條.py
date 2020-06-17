@@ -1,7 +1,7 @@
 import turtle
 t = turtle.Pen()
 t.width(2)
-turtle.bgcolor("black") #改變背景顏色
+turtle.bgcolor("black")
 colors = ["red","blue","green","orange"]
 t.speed(0)
 for x in range(400):
