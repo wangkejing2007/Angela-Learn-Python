@@ -10,3 +10,5 @@ print()
 #二元一次(symbols)比較 
 y,z = symbols('y z')
 print(solve([y+z-10, 2*y+z-16], [y,z]))
+print()
+print()
