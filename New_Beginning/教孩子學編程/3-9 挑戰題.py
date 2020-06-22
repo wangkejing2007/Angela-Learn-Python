@@ -14,4 +14,4 @@ for x in range(50):
 adj=input("請輸入形容詞：")
 noun=input("請輸入名詞：")
 verb=input("請輸入動詞：")
-print("很久以前，有個",adj,noun,verb,"這位老師")
+print("很久以前，有個",adj,noun,verb,"學校的老師")
