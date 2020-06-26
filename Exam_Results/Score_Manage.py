@@ -12,14 +12,14 @@ def menu():
 def disp_data(): #顯示所有成績紀錄
     cursor = conn.execute('select * from scoretable')
     print("編號\t登錄日期\t學年度\t學期別\t考試別\t科目\t成績")
-    print("===========================================================")
+    print("=============================================================")
     for row in cursor:
         print("{}\t{}\t{}\t{}\t{}\t{}\t{}".format(row[0],row[1],row[2],row[3],row[4],row[5],row[6]))
     input("按任意鍵返回主選單")
         
 def input_data(): #定義新增成績紀錄  
     while True:
-        item =input("請輸入新編號 (Enter==>停止輸入)：")
+        item =input("請輸入三位數的新編號 (Enter==>停止輸入)：")
         if item=="": break
         sqlstr="select * from scoretable where item='{}'" .format(item)
         cursor=conn.execute(sqlstr) 
@@ -29,10 +29,47 @@ def input_data(): #定義新增成績紀錄
             continue
 
         date =input("請輸入日期 (YYYY-MM-DD)：")
-        Schoolyear=input("請輸入學年度 (109、110、111)：")
-        semester=input("請輸入學期 (上學期、下學期)：") 
-        exam=input("請輸入考試別 (第一次、第二次、第三次)：")     
-        subject=input("請輸入科目 (國語、數學、英文、自然、歷史、地理)：") 
+
+        # 選擇學年
+        Schoolyear=input("請輸入學年度-->(1)109、(2)110、(3)111：")
+        if Schoolyear=="1":
+            Schoolyear="109"
+        elif Schoolyear=="2":
+            Schoolyear="110"
+        elif Schoolyear=="3":
+            Schoolyear="111"
+
+        # 選擇學期
+        semester=input("請選擇學期代號-->(1)上學期、(2)下學期：") 
+        if semester=="1":
+            semester="上學期"
+        elif semester=="2":
+            semester="下學期"
+
+        # 選擇考試別
+        exam=input("請輸入考試別代號-->(1)第一次月考、(2)第二次月考、(3)第三次月考：")   
+        if exam=="1":
+            exam="月考(1)"
+        elif exam=="2":
+            exam="月考(2)"
+        elif exam=="3":
+            exam="月考(3)"
+
+        # 選擇考試科目
+        subject=input("請輸入科目代號-->(1)國語、(2)數學、(3)英文、(4)自然、(5)歷史、(6)地理：") 
+        if subject=="1":
+            subject="國語"
+        elif subject=="2":
+            subject="數學"
+        elif subject=="3":
+            subject="英文"
+        elif subject=="4":
+            subject="自然"
+        elif subject=="5":
+            subject="歷史"
+        elif subject=="6":
+            subject="地理"
+
         score=input("請輸入考試成績 (請輸入正整數)：")       
         
         sqlstr="insert into scoretable values('{}','{}','{}','{}','{}','{}','{}');".format(item,date,Schoolyear,semester,exam,subject,score)
