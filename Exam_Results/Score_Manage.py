@@ -11,10 +11,10 @@ def menu():
         
 def disp_data(): #顯示所有成績紀錄
     cursor = conn.execute('select * from scoretable')
-    print("登錄日期\t學年度\t學期別\t考試別\t考試科目\t考試成績")
-    print("==================================================")
+    print("編號\t登錄日期\t學年度\t學期別\t考試別\t科目\t成績")
+    print("===========================================================")
     for row in cursor:
-        print("{}\t{}\t{}\t{}\t{}\t{}".format(row[0],row[1],row[2],row[3],row[4],row[5]))
+        print("{}\t{}\t{}\t{}\t{}\t{}\t{}".format(row[0],row[1],row[2],row[3],row[4],row[5],row[6]))
     input("按任意鍵返回主選單")
         
 def input_data(): #定義新增成績紀錄  
