@@ -11,6 +11,6 @@ listx = df['item']
 listy = df1['score']
 
 plt.rcParams['font.sans-serif']=['SimHei'] #要自己設定字體，要不然中文會變亂碼
-plt.plot(listx, listy, color ="red", label="考試成績") 
+plt.plot(listx, listy, color ="blue", label="考試成績") 
 plt.legend()
 plt.show()
