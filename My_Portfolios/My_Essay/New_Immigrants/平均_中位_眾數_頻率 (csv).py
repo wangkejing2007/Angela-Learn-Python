@@ -8,7 +8,7 @@ print(dat.head)
 
 
 # 平均數、中位數
-print('平均數', np.mean(dat['國中小總計']))
+print('平均數', round(np.mean(dat['國中小總計']),2)) #round()取小數點位數
 print('中位數', np.median(dat['國中小總計']))
 
 # 眾數
@@ -26,7 +26,7 @@ for dat in dat['國中小總計']:
     elif dat < 2200000:  hist[3] += 1
     elif dat < 2400000:  hist[4] += 1
     elif dat < 2600000:  hist[5] += 1
-    elif dat <= 2800000:  hist[6] += 1
+    elif dat < 2800000:  hist[6] += 1
 print('頻率:', hist)
 
 # 頻率分布圖
