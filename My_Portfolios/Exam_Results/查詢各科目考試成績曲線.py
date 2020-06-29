@@ -5,13 +5,14 @@ def menu():
     print("-------------------------")
     print("1. 國語科成績")
     print("2. 數學科成績")
-    print("3. 自然科成績")
-    print("4. 歷史科成績")
-    print("5. 地理科成績")
+    print("3. 英文科成績")
+    print("4. 自然科成績")
+    print("5. 歷史科成績")
+    print("6. 地理科成績")
     print("0. 結束本程式")
     print("-------------------------")
 
-#定義國語科曲線圖
+#定義國語科曲線圖(1)
 def Chinese_Score():
     df = pd.read_sql_query("SELECT * FROM scoretable where subject='國語'", con=con)
     df1 = pd.read_sql_query("SELECT * FROM scoretable where subject='國語'", con=con)
@@ -23,12 +24,12 @@ def Chinese_Score():
     plt.ylabel("考試成績")
     #plt.xlim(109,111)
     #plt.ylim(0,100)
-    #plt.grid(True)
+    plt.grid(True)
     plt.plot(listx, listy, color ="blue", label="成績曲線") 
     plt.legend()
     plt.show()
 
-#定義數學科曲線圖
+#定義數學科曲線圖(2)
 def Math_Score():
     df = pd.read_sql_query("SELECT * FROM scoretable where subject='數學'", con=con)
     df1 = pd.read_sql_query("SELECT * FROM scoretable where subject='數學'", con=con)
@@ -43,7 +44,7 @@ def Math_Score():
     plt.legend()
     plt.show()
 
-#定義英文科曲線圖
+#定義英文科曲線圖(3)
 def English_Score():
     df = pd.read_sql_query("SELECT * FROM scoretable where subject='英文'", con=con)
     df1 = pd.read_sql_query("SELECT * FROM scoretable where subject='英文'", con=con)
@@ -58,7 +59,7 @@ def English_Score():
     plt.legend()
     plt.show()
 
-#定義自然科曲線圖
+#定義自然科曲線圖(4)
 def Natural_Score():
     df = pd.read_sql_query("SELECT * FROM scoretable where subject='自然'", con=con)
     df1 = pd.read_sql_query("SELECT * FROM scoretable where subject='自然'", con=con)
@@ -73,7 +74,7 @@ def Natural_Score():
     plt.legend()
     plt.show()
 
-#定義歷史科曲線圖
+#定義歷史科曲線圖(5)
 def History_Score():
     df = pd.read_sql_query("SELECT * FROM scoretable where subject='歷史'", con=con)
     df1 = pd.read_sql_query("SELECT * FROM scoretable where subject='歷史'", con=con)
@@ -88,7 +89,7 @@ def History_Score():
     plt.legend()
     plt.show()
 
-#定義地理科曲線圖
+#定義地理科曲線圖(6)
 def Geography_Score():
     df = pd.read_sql_query("SELECT * FROM scoretable where subject='地理'", con=con)
     df1 = pd.read_sql_query("SELECT * FROM scoretable where subject='地理'", con=con)
