@@ -19,7 +19,7 @@ def disp_data(): #顯示所有成績紀錄
         
 def input_data(): #定義新增成績紀錄  
     while True:
-        item =input("請輸入3位數的新編號 (Enter==>停止輸入)：")
+        item =input("請輸入新編號 (Enter==>停止輸入)：")
         if item=="": break
         elif int(item)>999 or int(item)<1: 
             print()
