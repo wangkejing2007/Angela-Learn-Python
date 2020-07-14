@@ -1,0 +1,5 @@
+mfrc522.py：參閱C-5頁
+bot_iot_sw.py：參閱C-6頁
+read_rfid.txt：參閱C-7頁
+main.py：參閱C-10頁
+serial_com.py：參閱C-11頁

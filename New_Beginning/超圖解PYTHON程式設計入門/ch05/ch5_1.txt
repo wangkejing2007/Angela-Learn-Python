@@ -1,0 +1,13 @@
+from pytube import YouTube
+yt = YouTube('https://youtu.be/siQJhIp-UTU')
+
+yt.title
+yt.streams.all()
+yt.streams.filter(resolution="1080p").all()
+yt.streams.filter(res="1080p").all()[0]
+yt.streams.filter(res="1080p").first()
+yt.streams.filter(res="1080p",video_codec="vp9").all()
+yt.streams.filter(res="1080p",subtype="webm").all()
+
+stream = yt.streams.filter(res="1080p").first()
+stream.download()

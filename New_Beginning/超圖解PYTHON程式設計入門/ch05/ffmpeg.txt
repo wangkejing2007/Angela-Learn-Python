@@ -1,0 +1,1 @@
+ffmpeg -i "Taipei 101.mp4" -vn -ab 128k "愛上101.mp3"

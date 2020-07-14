@@ -1,0 +1,25 @@
+import mfrc522
+
+# sck, mosi, miso, rst, cs
+rdr = mfrc522.MFRC522(14, 13, 12, 16, 15)
+
+def read_tag():
+	print("\nRFID reader running...\n")
+	
+	try:
+		while True:  # 持續掃描標籤
+			stat, tag_type = rdr.request(rdr.REQIDL)
+
+			if stat == rdr.OK:
+				stat, raw_uid = rdr.anticoll()
+
+				if stat == rdr.OK:
+					print("RFID detected")
+					print("  - tag type: 0x{:02x}".format(tag_type))
+					print("  - uid	 : 0x{0:02x}{1:02x}{2:02x}{3:02x}".format(
+							raw_uid[0], raw_uid[1], raw_uid[2], raw_uid[3])
+						 )
+					print("")
+
+	except KeyboardInterrupt:  
+		print("Bye")

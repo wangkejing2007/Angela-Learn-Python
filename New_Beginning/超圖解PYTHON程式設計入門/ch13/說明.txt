@@ -1,0 +1,7 @@
+bot.py：參閱13-13頁
+bot_echo.py：參閱13-20頁
+bot_sticker.py：參閱13-22頁
+bot_secr_bad.py：參閱13-25頁
+bot_follow.py：參閱13-29頁
+bot_secr.py：參閱13-30頁
+bot_ok.py：參閱13-37頁

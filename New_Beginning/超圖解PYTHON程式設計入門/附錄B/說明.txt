@@ -1,0 +1,6 @@
+bot_iot.py：參閱B-6頁
+bot_iot_sw.py：參閱B-18頁
+microPython/diy_B2_1.py：參閱B-13頁
+microPython/diy_B2_2.py：參閱B-13頁
+microPython/bot_sw.py：參閱B-9頁
+microPython/bot_server.py：參閱B-20頁

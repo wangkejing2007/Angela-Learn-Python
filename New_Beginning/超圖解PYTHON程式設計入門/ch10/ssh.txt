@@ -1,0 +1,5 @@
+﻿ssh -R 80:你的電腦IP位址:80 serveo.net
+
+
+Ngrok下載頁：
+https://ngrok.com/download

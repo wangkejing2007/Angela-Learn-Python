@@ -1,0 +1,8 @@
+html.txt：參閱6-2頁
+webdriver.txt：參閱6-14頁
+xpath.txt：參閱6-18頁
+ch6_1.py：參閱6-20頁
+ch6_2.py：參閱6-29頁
+bid.txt：參閱6-30頁
+hidden.html：參閱6-35頁
+yahoo.py：參閱6-36頁

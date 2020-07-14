@@ -1,0 +1,8 @@
+a1.txt：參閱A-2頁
+decorator：參閱A-3頁
+generator.txt：參閱A-6頁
+fibo_1.py：參閱A-8頁
+fibo_2.py：參閱A-8頁
+fibo_3.txt：參閱A-9頁
+fibo_4.py：參閱A-10頁
+fibo_5.py：參閱A-11頁
