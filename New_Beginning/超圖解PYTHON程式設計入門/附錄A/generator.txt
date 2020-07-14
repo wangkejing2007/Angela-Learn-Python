@@ -1,0 +1,12 @@
+nums = [x**3 for x in range(2, 11)]
+
+nums = (x**3 for x in range(2, 11))
+nums.__next__()
+next(nums)
+
+
+nums = (x**3 for x in range(10000000000))
+for i in nums:
+    print(i)
+    if i > 100  # 若傳回值大於100…
+        break   # 則退出for迴圈

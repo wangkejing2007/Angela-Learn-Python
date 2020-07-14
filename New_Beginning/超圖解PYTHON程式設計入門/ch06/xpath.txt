@@ -1,0 +1,25 @@
+from selenium import webdriver
+
+driver_path = 'C:\\webdriver\\chromedriver.exe'  # 請自行修改路徑
+driver = webdriver.Chrome(driver_path)
+
+driver.get('https://swf.com.tw/scrap')
+h2 = driver.find_element_by_xpath('//div[@id='article1']/h2')
+print('文章標題：', h2.text)    # 顯示「文章標題： 用乒乓球自製減光罩」
+
+# //div[@class='gridContainer clearfix']/div
+
+# //div[@id='article1']//a
+
+# //div[@id='article1']//a[@class='readMore']
+
+# //div[@id='article1']//a[contains(text(),'繼續閱讀')]
+
+a_tag = driver.find_element_by_xpath('//div[@id='article1']//a')
+a_tag.get_attribute('href')
+
+h1 = driver.find_element_by_xpath('//div[@id='header']/h1')
+print(h1.text)    # 顯示：手作×DIY
+
+print(h1.get_attribute('innerHTML'))
+

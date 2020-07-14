@@ -1,0 +1,3 @@
+prices = [120, 380, 50, 30]
+tax = 1.08
+plus_tax = [round(p*tax) for p in prices]

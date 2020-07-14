@@ -1,0 +1,32 @@
+from selenium import webdriver
+
+driver_path = 'C:\\webdriver\\chromedriver.exe'  # 請自行修改路徑
+driver = webdriver.Chrome(driver_path)
+url = 'https://www.google.com.tw'
+driver.get(url)
+# driver.quit()
+
+tags = driver.find_elements_by_tag_name('input')
+len(tags)
+
+tags = driver.find_elements_by_name('q')
+len(tags)
+
+type(tags[0])
+
+tags[0].tag_name
+
+search_field = driver.find_element_by_name("q")
+search_field.send_keys('玫瑰星雲')
+
+search_field.submit()
+
+driver.back()
+search_field = driver.find_element_by_name('q')
+search_field.send_keys('時間旅行')
+
+from selenium.webdriver.common.keys import Keys
+search_field.send_keys(Keys.ENTER)
+
+body = driver.find_element_by_tag_name("body")
+body.send_keys(Keys.PAGE_DOWN)

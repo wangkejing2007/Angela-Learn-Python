@@ -1,0 +1,17 @@
+# 露天拍賣網址
+https://find.ruten.com.tw/s/?q=神臂鬥士&sort=new%2Fdc
+
+# //dl[@class='search_form s_grid']/dd/dl/dd/div[2]/h5
+# //dl[@class='search_form s_grid']//h5
+
+# Yahoo!奇摩拍賣
+https://tw.bid.yahoo.com/search/auction/product?kw=神臂鬥士&p=神臂鬥士&sort=-ptime
+
+# //ul[@class='gridList']//span[contains(@class,'BaseGridItem__title')]
+# //span[contains(@class,'BaseGridItem__title')]
+
+# 蝦皮購物
+https://shopee.tw/search?keyword=神臂鬥士&page=0&sortBy=ctime
+
+# //div[contains(@class,'shopee-search-item-result__item')]/div/a/div/div[2]/div[1]/div
+# //div[contains(@class,'shopee-search-item-result__item')]/div/a/div/div[2]/div[2]/div[1]

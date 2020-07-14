@@ -1,0 +1,8 @@
+﻿import requests as req
+
+url = 'http://swf.com.tw/scrap/img/IR.png'
+file_name = url.split('/')[-1]
+r = req.get(url)
+
+with open(file_name, 'wb') as f:
+    f.write(r.content)
