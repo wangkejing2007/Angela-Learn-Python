@@ -1,9 +1,0 @@
-﻿import requests as req
-url = "https://opendata.epa.gov.tw/webapi/api/rest/datastore/355000000I-000259?filters=County eq '臺中市'"
-
-req.packages.urllib3.disable_warnings()  # 取消HTTPS安全警告
-resp = req.get(url, verify=False)        # 取消HTTPS驗證
-resp.status_code
-resp.headers
-resp.headers['content-type']
-resp.text
