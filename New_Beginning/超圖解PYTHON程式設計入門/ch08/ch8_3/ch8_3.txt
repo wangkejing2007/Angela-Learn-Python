@@ -1,7 +1,0 @@
-from clock import Clock
-c = Clock()
-c.now()
-
-from clock import Cuckoo
-c = Cuckoo()
-c.alarm()
