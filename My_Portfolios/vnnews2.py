@@ -39,7 +39,7 @@ vgptitle = vgpsoup.find_all("h1", class_="title")
 #第一主標題
 vgpitem1 = vgptitle[0].getText()[31:]
 vgpitem1vn = tl.translate(vgpitem1, src='vi', dest='zh-TW').text
-#第二主標題
+#這裡第二主標題
 vgpitem2 = vgptitle[1].getText()[31:]
 vgpitem2vn = tl.translate(vgpitem2, src='vi', dest='zh-TW').text
 
